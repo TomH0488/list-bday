@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday Chloe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/1200x/90/4a/96/904a969c6a765f24ccb7e05c15290ebd.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* No repeat */
+            background-position: center; /* Center the image */
+            padding: 20px;
+            color: #fff; /* White text */
+        }
+
+        h1 {
+            text-align: center; /* Center the title */
+            color: #fff; /* White color for the title */
+            margin-bottom: 20px; /* Space below the title */
+            font-size: 2em; /* Font size for the title */
+        }
+
+        #collapsible-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .toggle-button {
+            background-color: rgba(51, 51, 51, 0.6); /* More translucent dark gray */
+            color: #fff;
+            border: 2px solid rgba(204, 204, 204, 0.8); /* Light gray border with some transparency */
+            padding: 10px 15px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+            position: relative; /* Position relative for the X mark */
+        }
+
+        .toggle-button:hover {
+            background-color: rgba(68, 68, 68, 0.7); /* Slightly lighter gray on hover with transparency */
+            border-color: #fff; /* White border on hover */
+        }
+
+        /* Cross icon */
+        .toggle-button::after {
+            content: '✖'; /* Cross character */
+            font-size: 18px; /* Size of the cross */
+            color: #fff; /* Cross color */
+            position: absolute; /* Position it absolutely */
+            right: 15px; /* Position it on the right */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Fade-in effect */
+        }
+
+        .toggle-button.active::after {
+            opacity: 1; /* Show the cross when active */
+        }
+
+        .content {
+            display: none; /* Hide content by default */
+            padding: 10px;
+            border: 2px solid rgba(204, 204, 204, 0.8); /* Light gray border with transparency */
+            border-radius: 5px;
+            background-color: rgba(34, 34, 34, 0.8); /* Dark background for content with transparency */
+            margin-top: 5px;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+        }
+
+        .content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Icons for each item */
+        .content::before {
+            content: '';
+            display: inline-block;
+            width: 24px;  /* Set the width of the icon */
+            height: 24px; /* Set the height of the icon */
+            margin-right: 8px; /* Space between the image and text */
+            background-size: cover; /* Ensure the image covers the area */
+        }
+    </style>
+</head>
+<body>
+
+<h1>reasons you are the goat (click each box)</h1> <!-- Title added here -->
+
+<ul id="collapsible-list">
+    <li>
+        <div class="toggle-button">game</div>
+        <div class="content">you make playing games so much more fun, everyone agrees even if the game is boring playing with you makes it fun</div>
+    </li>
+    <li>
+        <div class="toggle-button">game 2</div>
+        <div class="content">you are bugha at everygame ive seen u play, you always carry me in ow and even val, and when we play fortnite u the goat even if u dont think so</div>
+    </li>
+    <li>
+        <div class="toggle-button">patience</div>
+        <div class="content">i've seen you in many situations where most people would have gone insane but u always r so patient with everyone and handle every situation so well even when people are trying to annoy you, you still handle it so well</div>
+    </li>
+    <li>
+        <div class="toggle-button">music</div>
+        <div class="content">your music taste is elite, i dont think there has been a song you have showed me i havent added to my playlist. </div>
+    </li>
+    <li>
+        <div class="toggle-button">kind</div>
+        <div class="content">you are by far one of the kindest people ive met, you have treated me so kindly even when sometimes i dont deserve it. you have done so much for me its insane and i will forever be grateful for meeting you</div>
+    </li>
+    <li>
+        <div class="toggle-button">work</div>
+        <div class="content">you work so hard and it impresses me everyday how much of a goat you are at everything you do and how much more you deserve for the effort you put into things, especially at your job where you're like the only waitress majority of the time and you always do so well and put in so much more than you're even expected to.</div>
+    </li>
+    <li>
+        <div class="toggle-button">warning</div>
+        <div class="content">the next 2 are a bit much but it the truth </div>
+    </li>
+    <li>
+        <div class="toggle-button">face</div>
+        <div class="content">I love your everything to do with your face ie. your smile, your nose, your cheeks and your eyes holy</div>
+    </li>
+    <li>
+        <div class="toggle-button">sound</div>
+        <div class="content">your laugh is my favourite sound and your voice is so comforting and nice, it makes me so happy whenever i hear it</div>
+    </li>
+</ul>
+
+<script>
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            const content = button.nextElementSibling;
+            content.classList.toggle('show');
+        });
+    });
+</script>
+
+</body>
+</html>

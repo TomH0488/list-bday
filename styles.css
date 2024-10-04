@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/1200x/90/4a/96/904a969c6a765f24ccb7e05c15290ebd.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire page */
+    background-repeat: no-repeat; /* No repeat */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    color: #fff; /* White text */
+}
